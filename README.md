@@ -47,7 +47,3 @@ For development with auto-compilation:
 ```bash
 npm run watch
 ```
-
-## License
-
-MIT
