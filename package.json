@@ -1,0 +1,36 @@
+{
+    "name": "potassium API",
+    "displayName": "Potassium API",
+    "description": "API support for Potassium",
+    "version": "1.0.0",
+    "publisher": "potassium",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:lua",
+        "onLanguage:luau"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "lua",
+                "aliases": ["Lua", "lua"],
+                "extensions": [".lua", ".luau"]
+            }
+        ]
+    },
+    "scripts": {
+        "compile": "tsc -b",
+        "watch": "tsc -b -w"
+    },
+    "devDependencies": {
+        "@types/node": "^16.18.126",
+        "@types/vscode": "^1.70.0",
+        "typescript": "^4.9.5"
+    }
+}
