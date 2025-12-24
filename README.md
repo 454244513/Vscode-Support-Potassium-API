@@ -4,52 +4,50 @@ A Visual Studio Code extension that provides IntelliSense support for the Potass
 
 ## Features
 
-- **Auto-completion** for Potassium API functions and classes
-- **Hover documentation** with detailed function descriptions
-- **Type definitions** for better code analysis
-- **Global variables** recognition for Roblox and Potassium environments
+- Auto-completion for Potassium API functions and classes
+- Hover documentation for API methods
+- Type definitions for better code intelligence
+- Support for both `.lua` and `.luau` files
 
 ## Build Requirements
 
-- **Node.js** (v16 or higher)
-- **npm** (comes with Node.js)
-- **TypeScript** (installed as dev dependency)
-- **Visual Studio Code** (for testing)
+- Node.js (v16 or higher)
+- npm or yarn
+- TypeScript
 
-## Building the Extension
+## Building
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd potassium-api
-   ```
+1. Install dependencies:
+```bash
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+2. Compile TypeScript:
+```bash
+npm run compile
+```
 
-3. **Compile TypeScript**
-   ```bash
-   npm run compile
-   ```
+3. Package the extension:
+```bash
+npx vsce package
+```
 
-4. **Package the extension** (optional)
-   ```bash
-   npx vsce package
-   ```
-   This creates a `.vsix` file that can be installed in VS Code.
-
-## Development
-
-- **Watch mode**: `npm run watch` - Automatically recompiles on file changes
-- **Test in VS Code**: Press `F5` to launch a new Extension Development Host window
+This will generate a `.vsix` file that can be installed in VS Code.
 
 ## Installation
 
 1. Open VS Code
 2. Go to Extensions (Ctrl+Shift+X)
-3. Click "Install from VSIX..." 
+3. Click the "..." menu and select "Install from VSIX..."
 4. Select the generated `.vsix` file
 
-The extension will automatically activate when you open Lua/Luau files and provide IntelliSense for Potassium API functions.
+## Development
+
+For development with auto-compilation:
+```bash
+npm run watch
+```
+
+## License
+
+MIT
